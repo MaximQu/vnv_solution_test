@@ -9,7 +9,7 @@ const Header = () => {
 		<header className="fixed left-0 top-0 z-50 w-full bg-[#211F28] py-2">
 			<nav className="container flex items-center justify-between gap-3">
 				<a href="/index.html" className="block ">
-					<img src="/images/logo.png" className="h-10 w-16 md:w-20 md:h-16 lg:h-24 lg:w-36  object-contain" alt="VNV Solution" />
+					<img src="./images/logo.png" className="h-10 w-16 md:w-20 md:h-16 lg:h-24 lg:w-36  object-contain" alt="VNV Solution" />
 				</a>
 				<ul
 					className={twMerge(

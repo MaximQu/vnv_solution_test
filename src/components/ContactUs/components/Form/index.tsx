@@ -142,7 +142,7 @@ const Form = () => {
 			</form>
 			<div className="relative hidden sm:block w-[12.5rem] border-l-[6px] border-l-blue">
 				<img
-					src="/images/cement.jpg"
+					src="./images/cement.jpg"
 					className="absolute w-full h-full inset-0 object-cover"
 					alt=""
 				/>
