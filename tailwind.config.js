@@ -21,6 +21,16 @@ export default {
                     // "2xl": "1399px",
                 },
             },
+            screens: {
+                "3xs": "320px",
+                "2xs": "375px",
+                xs: "480px",
+                sm: "575px",
+                md: "768px",
+                lg: "991px",
+                xl: "1040px",
+                // "2xl": "1399px",
+            },
             fontFamily: {
                 'ibmPlexMono': ['IBM Plex Mono', ...defaultTheme.fontFamily.sans]
             },

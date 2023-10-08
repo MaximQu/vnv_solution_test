@@ -36,12 +36,15 @@ const faqData = [
 
 const Faq = () => {
 	return (
-		<section className="py-5 md:py-7 lg:py-10 bg-white text-primary" id="faq">
+		<section
+			className="bg-white py-5 text-primary md:py-7 lg:py-10"
+			id="faq"
+		>
 			<div className="container">
 				<Title>We are honest with our customers</Title>
 				<div className="grid grid-cols-1 gap-3 md:grid-cols-2">
 					{faqData.map((item) => (
-						<AnswQuest item={item} />
+						<AnswQuest key={item.id} item={item} />
 					))}
 				</div>
 			</div>
