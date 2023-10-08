@@ -13,7 +13,7 @@ const App = () => {
 	return (
 		<>
 			<Header />
-			<main className="container font-graphik">
+			<main className=" font-ibmPlexMono">
 				<Hero />
 				<Advantages />
 				<Services />

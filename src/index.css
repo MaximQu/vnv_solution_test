@@ -3,73 +3,74 @@
 @tailwind utilities;
 
 @font-face {
-	font-family: "Graphik";
-	src: url("/fonts/Graphik-Thin.woff") format("woff");
-	font-weight: 100;
+	font-family: "IBM Plex Mono";
+	src: url("IBMPlexMono-Bold.woff") format("woff");
+	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: "Graphik";
-	src: url("/fonts/Graphik-Extralight.woff") format("woff");
-	font-weight: 200;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Graphik";
-	src: url("/fonts/Graphik-Light.woff") format("woff");
+	font-family: "IBM Plex Mono";
+	src: url("IBMPlexMono-Light.woff") format("woff");
 	font-weight: 300;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: "Graphik", sans-serif;
-	src: url("/fonts/Graphik-Regular.woff") format("woff");
+	font-family: "IBM Plex Mono";
+	src: url("IBMPlexMono-Regular.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: "Graphik", sans-serif;
-	src: url("/fonts/Graphik-Medium.woff") format("woff");
+	font-family: "IBM Plex Mono";
+	src: url("IBMPlexMono-Medium.woff") format("woff");
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: "Graphik", sans-serif;
-	src: url("/fonts/Graphik-Semibold.woff") format("woff");
-	font-weight: 600;
+	font-family: "IBM Plex Mono";
+	src: url("IBMPlexMono-Thin.woff") format("woff");
+	font-weight: 100;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: "Graphik", sans-serif;
-	src: url("/fonts/Graphik-Bold.woff") format("woff");
-	font-weight: 700;
+	font-family: "IBM Plex Mono";
+	src: url("IBMPlexMono-ExtraLight.woff") format("woff");
+	font-weight: 200;
 	font-style: normal;
 	font-display: swap;
+}
+
+@font-face {
+	font-family: "IBM Plex Mono";
+	src: url("IBMPlexMono-SemiBold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+html {
+    scroll-behavior: smooth
 }
 
 body {
 	@apply bg-primary font-medium text-white;
 }
 
-.swiper-pagination {
-}
-
 .swiper-pagination-bullet {
 	width: 6px;
 	height: 6px;
 	background: transparent;
-	border: 1px solid #00BCD4;
+	border: 1px solid #00bcd4;
 	opacity: 1;
 }
 
@@ -78,12 +79,13 @@ body {
 	height: 6px;
 	transition: width 0.5s;
 	border-radius: 5px;
-	background: #00BCD4;
+	background: #00bcd4;
 	border: 1px solid transparent;
 }
 
 ::-webkit-scrollbar {
 	width: 8px;
+	height: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -96,7 +98,13 @@ body {
 }
 
 @layer components {
-    .form-container {
-        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
-    }
+	.form-container {
+		clip-path: polygon(
+			0 0,
+			100% 0,
+			100% calc(100% - 20px),
+			calc(100% - 20px) 100%,
+			0 100%
+		);
+	}
 }

@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import Title from "../../ui/TItle";
 
 const projectsData = [
 	{
@@ -52,37 +53,62 @@ const projectsData = [
 
 const Projects = () => {
 	return (
-		<section>
-			<h2 className="mb-5">Our projects</h2>
-			<Swiper
-				// install Swiper modules
-				modules={[Pagination]}
-				spaceBetween={30}
-				slidesPerView={1}
-				grabCursor={true}
-				pagination={{ clickable: true }}
-				onSwiper={(swiper) => console.log(swiper)}
-				onSlideChange={() => console.log("slide change")}
-				className="pb-8"
-			>
-				{projectsData.map((project) => (
-					<SwiperSlide key={project.id} className="flex flex-col bg-white/10 p-2">
-						<a
-							className="cursor-grab"
+		<section className="py-5" id="projects">
+			<div className="container">
+				<Title>Our projects</Title>
+				<Swiper
+					// install Swiper modules
+					modules={[Pagination]}
+					spaceBetween={30}
+					slidesPerView={1}
+					grabCursor={true}
+					pagination={{ clickable: true }}
+					breakpoints={{
+						575: {
+							slidesPerView: 1,
+						},
+						640: {
+							slidesPerView: 2,
+						},
+						991: {
+							slidesPerView: 2,
+							spaceBetween: 20,
+						},
+						1399: {
+							slidesPerView: 3,
+							spaceBetween: 30,
+						},
+					}}
+					className="pb-8 md:py-7 lg:py-10"
+				>
+					{projectsData.map((project) => (
+						<SwiperSlide
 							key={project.id}
-							href={project.projectUrl}
+							className="flex flex-col bg-white/10"
 						>
-							<img
-								className="mb-5"
-								src={project.imgUrl}
-								alt={project.title}
-							/>
-							<h3 className="mb-3 text-3xl">{project.title}</h3>
-							<p className="text-base line-clamp-4">{project.description}</p>
-						</a>
-					</SwiperSlide>
-				))}
-			</Swiper>
+							<a
+								className="cursor-grab"
+								key={project.id}
+								href={project.projectUrl}
+							>
+								<img
+									className="mb-5"
+									src={project.imgUrl}
+									alt={project.title}
+								/>
+								<div className="px-4 pb-4">
+									<h3 className="mb-3 text-3xl">
+										{project.title}
+									</h3>
+									<p className="line-clamp-4 text-base ">
+										{project.description}
+									</p>
+								</div>
+							</a>
+						</SwiperSlide>
+					))}
+				</Swiper>
+			</div>
 		</section>
 	);
 };
