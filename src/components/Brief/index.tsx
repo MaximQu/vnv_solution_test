@@ -41,7 +41,7 @@ const Breif = () => {
 		<section className="py-5 md:py-7 lg:py-10" id="brief">
 			<div className="container">
 				<Title>Filling out the brief</Title>
-				<p className="mb-4">
+				<p className="mb-4 text-xl">
 					<dfn className="text-blue">
 						<strong>Brief</strong>
 					</dfn>{" "}

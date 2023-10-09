@@ -33,7 +33,7 @@ const Popup = () => {
 						name="userEmail"
 						placeholder="Email"
 					/>
-					<Button className="w-fit max-w-fit text-lg sm:rounded-md font-normal">
+					<Button type="submit" className="w-fit max-w-fit text-lg sm:rounded-md font-normal">
 						Send
 					</Button>
 				</form>
