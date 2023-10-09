@@ -9,7 +9,7 @@ const Hero = () => {
 					<span className="sm:block">
 						<strong className="font-bold"> solutions</strong>
 					</span>
-					<span className="xs:block"> for your</span> busine<s>ss</s>
+					<span className="xs:block"> for your</span> business
 				</h1>
 				<Button className="m-0">Order</Button>
 			</div>
