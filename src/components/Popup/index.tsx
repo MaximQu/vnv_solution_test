@@ -41,7 +41,7 @@ const Popup = () => {
 			<button
 				className={twMerge(
 					"absolute inset-0 z-10 cursor-pointer text-3xl text-white duration-200 hover:-rotate-45",
-					visible && "inset-auto top-2 right-2 ",
+					visible && "inset-auto hover:rotate-0 top-2 right-2 ",
 				)}
 				onClick={() => setVisible((prev) => !prev)}
 			>
