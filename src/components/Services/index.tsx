@@ -1,6 +1,7 @@
 import { Fragment, useState } from "react";
 import Button from "../../ui/Button";
 import Title from "../../ui/TItle";
+import { twMerge } from "tailwind-merge";
 
 const servicesData = [
 	{
@@ -47,12 +48,15 @@ const Services = () => {
 		<section className="py-5 md:py-7 lg:py-10" id="services">
 			<div className="container">
 				<Title>Services</Title>
-				<ul className="scroll- mb-6 flex gap-4 overflow-x-scroll">
+				<ul className="scroll- mb-6 flex gap-4 overflow-x-scroll pb-2">
 					{servicesData.map((item) => (
 						<li
 							key={item.id}
 							onClick={() => setActiveTab(item.tab)}
-							className="min-w-[10.9375rem] cursor-pointer whitespace-nowrap bg-white/10 p-4 text-center text-lg backdrop-blur-md hover:bg-white/50"
+							className={twMerge(
+								"min-w-[11rem] cursor-pointer whitespace-nowrap bg-white/10 px-2 py-4 text-center text-lg backdrop-blur-md duration-150 hover:bg-white/50",
+								activeTab === item.tab && "bg-white/50",
+							)}
 						>
 							{item.tab}
 						</li>

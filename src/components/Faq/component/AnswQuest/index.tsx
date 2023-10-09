@@ -26,12 +26,13 @@ const AnswQuest = ({ item }: answerProps) => {
 				onClick={() => setVisible((prev) => !prev)}
 				className={twMerge(
 					asnwerStyles,
-					visible && "text-blue before:-rotate-45 after:rotate-45",
+					visible &&
+						"pb-4 text-blue before:-rotate-45 after:rotate-45",
 				)}
 			>
 				{item.question}
 			</p>
-			<div className="overflow-hidden pt-4 text-lg">
+			<div className="overflow-hidden text-lg">
 				<p>{item.answer}</p>
 			</div>
 		</div>

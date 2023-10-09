@@ -67,10 +67,7 @@ const Breif = () => {
 					but they have different tasks. The brief is needed to to
 					understand what you need to work on, what the main goal of
 					the project is. A statement of work is a specific task with
-					certain technical characteristics. characteristics. If the
-					project is large, there may be several of them for for a
-					particular service or product. Most often, the brief becomes
-					the basis for the TOR.
+					certain technical characteristics. characteristics.
 				</p>
 				<Button>Fill brief now</Button>
 			</div>

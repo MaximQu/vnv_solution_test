@@ -21,9 +21,9 @@ const Form = () => {
 		});
 	};
 	return (
-		<div className="mx-auto flex w-[min(calc(100%-2rem),50rem)] sm:justify-between justify-center bg-gray-900/80 md:bg-[#282828] mb-5">
+		<div className="mx-auto mb-5 flex w-[min(calc(100%-2rem),50rem)] justify-center bg-gray-900/80 sm:justify-between md:bg-[#282828]">
 			<form
-				className="form-container flex w-full max-w-lg flex-col gap-10 sm:pl-14  p-5"
+				className="form-container flex w-full max-w-lg flex-col gap-10 p-5  sm:pl-14"
 				action=""
 				method="post"
 				autoComplete="true"
@@ -140,10 +140,10 @@ const Form = () => {
 				</div>
 				<Button type="submit">Send</Button>
 			</form>
-			<div className="relative hidden sm:block w-[12.5rem] border-l-[6px] border-l-blue">
+			<div className="relative hidden w-[12.5rem] border-l-[6px] border-l-blue sm:block">
 				<img
 					src="./images/cement.jpg"
-					className="absolute w-full h-full inset-0 object-cover"
+					className="absolute inset-0 h-full w-full object-cover"
 					alt=""
 				/>
 			</div>

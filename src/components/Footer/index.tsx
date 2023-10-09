@@ -2,9 +2,9 @@ import Socials from "../../ui/Socials";
 
 const Footer = () => {
 	return (
-		<footer className="py-5 bg-[#282828]">
-			<div className="container flex justify-between items-center mb-6">
-				<a href="/index.html" className="block h-24 w-36">
+		<footer className="bg-[#282828] py-5">
+			<div className="container mb-6 flex items-center justify-between">
+				<a href="/index.html" className="h-10 w-16 object-contain md:h-16 md:w-24">
 					<img src="./images/logo.png" alt="VNV Solution" />
 				</a>
 				<address>
@@ -13,7 +13,7 @@ const Footer = () => {
 					Lviv, Ukraine
 				</address>
 			</div>
-			<Socials/>
+			<Socials />
 		</footer>
 	);
 };

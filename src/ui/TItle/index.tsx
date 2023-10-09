@@ -7,7 +7,7 @@ type TitleProps = {
 
 const Title: FC<TitleProps> = ({ children, className, ...props }) => {
 	return (
-		<h2 className={twMerge("mb-4 text-4xl", className)}  {...props}>
+		<h2 className={twMerge("mb-4 text-4xl", className)} {...props}>
 			{children}
 		</h2>
 	);
