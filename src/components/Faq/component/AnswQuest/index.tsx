@@ -1,5 +1,6 @@
 import { twMerge } from "tailwind-merge";
-import { useState } from "react";
+import { forwardRef, useState } from "react";
+import { motion } from "framer-motion";
 
 type answerProps = {
 	item: {
@@ -12,13 +13,13 @@ type answerProps = {
 const asnwerStyles =
 	"relative text-xl font-semibold pr-7 before:absolute before:rounded-[100%] after:rounded-[100%] before:right-0 before:top-3 before:h-1 before:w-5 before:bg-primary after:absolute cursor-pointer after:right-0 after:top-3 after:h-1 after:w-5 after:rotate-90 after:bg-primary before:duration-200 after:duration-200 duration-200";
 
-const AnswQuest = ({ item }: answerProps) => {
+const AnswQuest = forwardRef<HTMLDivElement, answerProps>(({ item }: answerProps, ref) => {
 	const [visible, setVisible] = useState(false);
-
 	return (
 		<div
+        ref={ref}
 			className={twMerge(
-				"grid  grid-rows-[min-content_0fr] bg-white/20 p-2 duration-200",
+				"grid grid-rows-[min-content_0fr] bg-white/20 p-2 duration-200",
 				visible && "grid-rows-[min-content_1fr]",
 			)}
 		>
@@ -37,6 +38,6 @@ const AnswQuest = ({ item }: answerProps) => {
 			</div>
 		</div>
 	);
-};
+})
 
-export default AnswQuest;
+export default motion(AnswQuest);

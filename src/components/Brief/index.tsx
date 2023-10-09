@@ -1,40 +1,8 @@
+import { motion } from "framer-motion";
+import { breifData } from "../../allData";
 import Button from "../../ui/Button";
 import Title from "../../ui/TItle";
-
-const breifData = [
-	{
-		id: "1",
-		text: "Information about the client's company (its specialization, features, competitive advantages)",
-	},
-	{
-		id: "2",
-		text: "A concept, an idea of a project to work on",
-	},
-	{
-		id: "3",
-		text: "Target audience (for whom the product is developed)",
-	},
-	{
-		id: "4",
-		text: "Specifications (depends on the specific service)",
-	},
-	{
-		id: "5",
-		text: "Deadlines",
-	},
-	{
-		id: "6",
-		text: "Expected results",
-	},
-	{
-		id: "7",
-		text: "Customer contacts",
-	},
-	{
-		id: "8",
-		text: "Additional information (you need to give the client the opportunity to add something important that was not mentioned in the brief)",
-	},
-];
+import { fadeInAnimationVariants } from "../animationOnScroll";
 
 const Breif = () => {
 	return (
@@ -52,13 +20,18 @@ const Breif = () => {
 					What are the components of a brief?
 				</h2>
 				<ul className="mb-4 grid grid-cols-1 gap-2 md:grid-cols-2">
-					{breifData.map((item) => (
-						<li
+					{breifData.map((item, index) => (
+						<motion.li
+							variants={fadeInAnimationVariants}
+							initial="initial"
+							whileInView="animate"
+							viewport={{ once: true }}
+							custom={index}
 							key={item.id}
 							className="bg-white  p-2 font-medium text-primary"
 						>
 							- {item.text}.
-						</li>
+						</motion.li>
 					))}
 				</ul>
 				<p className="mb-4 border-l-4 border-l-blue bg-blue/60 p-2 pl-5">

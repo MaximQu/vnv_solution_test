@@ -2,45 +2,9 @@ import { Fragment, useState } from "react";
 import Button from "../../ui/Button";
 import Title from "../../ui/TItle";
 import { twMerge } from "tailwind-merge";
-
-const servicesData = [
-	{
-		id: "1",
-		tab: "Custom Web",
-		title: "Custom Web Application Development",
-		body: " Tailored solutions designed from scratch to meet your unique business needs, ensuring optimal functionality and user experience.",
-	},
-	{
-		id: "2",
-		tab: "E-commerce",
-		title: "E-commerce Platform Development",
-		body: "Building robust online stores with secure payment gateways, inventory management, and seamless user interfaces to boost your online sales.",
-	},
-	{
-		id: "3",
-		tab: "Web Application",
-		title: "Web Application Maintenance and Support",
-		body: "Ongoing technical support, bug fixes, and regular updates to keep your web application running smoothly and securely.",
-	},
-	{
-		id: "4",
-		tab: "Responsive Design",
-		title: "Responsive Design and Optimization",
-		body: "Crafting mobile-friendly and visually appealing web apps, while optimizing performance and load times for exceptional user satisfaction.",
-	},
-	{
-		id: "5",
-		tab: "Cloud Integration",
-		title: "Cloud Integration and Scalability",
-		body: "Leveraging cloud technologies to ensure scalability, flexibility, and cost-efficiency as your business grows and evolves.",
-	},
-	{
-		id: "6",
-		tab: "Security",
-		title: "Security and Compliance",
-		body: "Implementing robust security measures, data encryption, and compliance with industry standards to protect your web application and user data from threats and breaches.",
-	},
-];
+import { motion } from "framer-motion";
+import { fadeInAnimationVariants } from "../animationOnScroll";
+import { servicesData } from "../../allData";
 
 const Services = () => {
 	const [activeTab, setActiveTab] = useState("Custom Web");
@@ -49,8 +13,13 @@ const Services = () => {
 			<div className="container">
 				<Title>Services</Title>
 				<ul className="scroll- mb-6 flex gap-4 overflow-x-scroll pb-2">
-					{servicesData.map((item) => (
-						<li
+					{servicesData.map((item, index) => (
+						<motion.li
+                        variants={fadeInAnimationVariants}
+							initial="initial"
+							whileInView="animate"
+							viewport={{ once: true }}
+							custom={index}
 							key={item.id}
 							onClick={() => setActiveTab(item.tab)}
 							className={twMerge(
@@ -59,7 +28,7 @@ const Services = () => {
 							)}
 						>
 							{item.tab}
-						</li>
+						</motion.li>
 					))}
 				</ul>
 				<div className="relative min-h-[15rem] text-xl text-white before:absolute before:inset-0 before:-z-10 before:m-auto before:h-[110%] before:w-[80%] before:skew-x-12 before:rounded-2xl before:bg-blue before:duration-100 hover:before:skew-x-0 md:min-h-min md:before:-top-3 md:before:bottom-auto md:before:h-[70%]">
