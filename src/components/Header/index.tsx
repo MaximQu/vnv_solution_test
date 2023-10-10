@@ -67,12 +67,12 @@ const Header = () => {
 						active && "before:rotate-45 after:-rotate-45",
 					)}
 				>
-					<div
+					<span
 						className={twMerge(
 							"h-0.5 w-full bg-white duration-150",
 							active && "scale-0",
 						)}
-					></div>
+					></span>
 				</button>
 			</nav>
 		</header>
