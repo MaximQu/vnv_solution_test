@@ -13,12 +13,12 @@ const Hero = () => {
 					variants={fadeInAnimationVariantsEl}
 					className="mb-20 text-5xl font-thin leading-snug md:text-7xl"
 				>
-					Easy, quality, IT - <b className="font-bold text-blue">w</b>
+					Easy, quality, IT - <br />{" "}
+					<b className="font-bold text-blue">w</b>
 					inning
-					<span className="sm:block">
-						<strong className="font-bold"> solutions</strong>
-					</span>
-					<span className="xs:block"> for your</span> business
+					<strong className="font-bold"> solutions </strong>
+					<br />
+					for your business
 				</motion.h1>
 				<Button className="m-0">Order</Button>
 			</div>
