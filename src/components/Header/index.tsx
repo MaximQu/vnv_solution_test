@@ -8,7 +8,7 @@ const Header = () => {
 	return (
 		<header className="fixed left-0 top-0 z-50 w-full bg-[#211F28] py-2">
 			<nav className="container flex items-center justify-between gap-3">
-				<a href="/index.html" className="block ">
+				<a href="./index.html" className="block ">
 					<img
 						src="./images/logo.png"
 						className="h-10 w-16 object-contain md:h-12 md:w-24"
