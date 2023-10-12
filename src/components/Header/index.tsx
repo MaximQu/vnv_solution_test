@@ -1,10 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { twMerge } from "tailwind-merge";
 
 const listItemStyles =
 	"relative before:absolute before:-bottom-1 before:right-0 before:h-0.5 before:w-0 before:bg-blue before:duration-200 hover:text-blue hover:before:left-0 hover:before:right-auto hover:before:w-full font-thin uppercase";
 const Header = () => {
 	const [active, setActive] = useState(false);
+	const disableScroll = () => {
+		setActive((prev) => !prev);
+	};
+	useEffect(() => {
+		document.body.style.overflow = active ? "hidden" : "visible";
+	}, [active]);
 	return (
 		<header className="fixed left-0 top-0 z-50 w-full bg-[#211F28] py-2">
 			<nav className="container flex items-center justify-between gap-3">
@@ -61,7 +67,7 @@ const Header = () => {
 				</ul>
 				<button
 					type="button"
-					onClick={() => setActive((prev) => !prev)}
+					onClick={() => disableScroll()}
 					className={twMerge(
 						"relative z-50 h-6 w-8 before:absolute before:left-0 before:top-0 before:h-0.5 before:w-full before:origin-[left_center] before:bg-white before:duration-150 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-[left_center] after:bg-white after:duration-150 lg:hidden",
 						active && "before:rotate-45 after:-rotate-45",
@@ -69,7 +75,7 @@ const Header = () => {
 				>
 					<span
 						className={twMerge(
-							"h-0.5 block w-full bg-white duration-150",
+							"block h-0.5 w-full bg-white duration-150",
 							active && "scale-0",
 						)}
 					></span>
