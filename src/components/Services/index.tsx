@@ -12,7 +12,7 @@ const Services = () => {
 		<section className="py-5 md:py-7 lg:py-10" id="services">
 			<div className="container">
 				<Title>Services</Title>
-				<ul className="scroll- mb-6 flex gap-4 overflow-x-scroll pb-2">
+				<ul className="mb-6 flex gap-4 overflow-x-scroll pb-2">
 					{servicesData.map((item, index) => (
 						<motion.li
                         variants={fadeInAnimationVariants}
@@ -36,7 +36,7 @@ const Services = () => {
 						.filter((item) => item.tab === activeTab)
 						.map((item) => (
 							<Fragment key={item.id}>
-								<div className="mb-8 min-h-[15rem] bg-white/10 p-4 backdrop-blur-md md:min-h-min">
+								<div className="mb-3 md:mb-5 lg:mb-10 min-h-[15rem] bg-white/10 p-4 backdrop-blur-md md:min-h-min">
 									<h3 className="mb-3 text-xl font-bold">
 										{item.title}
 									</h3>

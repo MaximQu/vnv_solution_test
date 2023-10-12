@@ -3,64 +3,58 @@
 @tailwind utilities;
 
 @font-face {
-	font-family: "/fonts/IBM Plex Mono";
+	font-family: "./fonts/IBM Plex Mono";
+	src: url("IBMPlexMono-Thin.woff") format("woff");
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "./fonts/IBM Plex Mono";
+	src: url("IBMPlexMono-ExtraLight.woff") format("woff");
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "./fonts/IBM Plex Mono";
+	src: url("IBMPlexMono-Light.woff") format("woff");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "./fonts/IBM Plex Mono";
+	src: url("IBMPlexMono-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "./fonts/IBM Plex Mono";
+	src: url("IBMPlexMono-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "./fonts/IBM Plex Mono";
+	src: url("IBMPlexMono-SemiBold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "./fonts/IBM Plex Mono";
 	src: url("IBMPlexMono-Bold.woff") format("woff");
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
 }
 
-@font-face {
-	font-family: "/fonts/IBM Plex Mono";
-	src: url("IBMPlexMono-Light.woff") format("woff");
-	font-weight: 300;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "/fonts/IBM Plex Mono";
-	src: url("IBMPlexMono-Regular.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "/fonts/IBM Plex Mono";
-	src: url("IBMPlexMono-Medium.woff") format("woff");
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "/fonts/IBM Plex Mono";
-	src: url("IBMPlexMono-Thin.woff") format("woff");
-	font-weight: 100;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "/fonts/IBM Plex Mono";
-	src: url("IBMPlexMono-ExtraLight.woff") format("woff");
-	font-weight: 200;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "/fonts/IBM Plex Mono";
-	src: url("IBMPlexMono-SemiBold.woff") format("woff");
-	font-weight: 600;
-	font-style: normal;
-	font-display: swap;
-}
-
 html {
 	scroll-behavior: smooth;
-	scroll-padding-top: 8.25rem;
+	scroll-padding-top: 7.5rem;
 }
 
 body {
@@ -96,11 +90,6 @@ body {
 ::-webkit-scrollbar-thumb {
 	background-color: darkgrey;
 	outline: 1px solid slategrey;
-}
-
-.App {
-	cursor: none;
-    
 }
 
 @layer components {

@@ -9,7 +9,7 @@ const itemStyles =
 const Advantages = () => {
 	return (
 		<section
-			className="bg-[#211F28] py-5 md:py-7 lg:py-10 "
+			className="bg-[#211F28] py-5 md:py-7 lg:py-10"
 			id="advantages"
 		>
 			<div className="container">
