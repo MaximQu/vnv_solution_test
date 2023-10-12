@@ -39,6 +39,15 @@ export const projectsData = [
 		description:
 			"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non provident hic reprehenderit corrupti quis sed et debitis! Magni fugit totam, debitis voluptates maxime dolorum corporis amet facilis perspiciatis voluptatum aperiam expedita ipsam animi eaque tempore maiores, optio modi eveniet excepturi? Enim temporibus doloremque dicta iusto atque, a iure natus corporis?",
 	},
+    {
+		id: "6",
+		projectUrl: "#",
+		title: "Project 6",
+		imgUrl: "./images/cement.jpg",
+		description:
+			"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non provident hic reprehenderit corrupti quis sed et debitis! Magni fugit totam, debitis voluptates maxime dolorum corporis amet facilis perspiciatis voluptatum aperiam expedita ipsam animi eaque tempore maiores, optio modi eveniet excepturi? Enim temporibus doloremque dicta iusto atque, a iure natus corporis?",
+	},
+
 ];
 export const breifData = [
 	{

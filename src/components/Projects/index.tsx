@@ -1,15 +1,15 @@
 // import Swiper core and required modules
-import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from "framer-motion";
+import { Pagination } from "swiper/modules";
 
+import { projectsData } from "../../allData";
+import { fadeInAnimationVariantsEl } from "../animationOnScroll";
+import Title from "../../ui/TItle";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import Title from "../../ui/TItle";
-import { projectsData } from "../../allData";
-import { fadeInAnimationVariantsEl } from "../animationOnScroll";
 
 const Projects = () => {
 	return (
@@ -28,6 +28,7 @@ const Projects = () => {
 					modules={[Pagination]}
 					spaceBetween={30}
 					slidesPerView={1}
+                    loop={true}
 					grabCursor={true}
 					pagination={{ clickable: true }}
 					breakpoints={{
