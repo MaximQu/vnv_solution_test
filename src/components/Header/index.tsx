@@ -69,7 +69,7 @@ const Header = () => {
 				>
 					<span
 						className={twMerge(
-							"h-0.5 w-full bg-white duration-150",
+							"h-0.5 block w-full bg-white duration-150",
 							active && "scale-0",
 						)}
 					></span>
