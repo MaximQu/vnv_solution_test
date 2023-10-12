@@ -23,9 +23,9 @@ const Header = () => {
 				</a>
 				<ul
 					className={twMerge(
-						"absolute left-full top-0 z-10 flex h-auto w-full flex-col items-center justify-end gap-4 bg-[#211F28] py-3 text-2xl duration-300 lg:static lg:flex-row",
+						"absolute -right-full top-0 z-10 flex h-screen w-screen flex-col items-center justify-center gap-4 bg-[#211F28] py-3 text-2xl duration-300 md:w-1/2 lg:static lg:h-auto lg:flex-row lg:justify-end",
 						active &&
-							"left-0 h-screen w-screen flex-col justify-center py-0",
+							"left-auto right-0 h-screen w-screen flex-col justify-center py-0",
 					)}
 				>
 					<li
