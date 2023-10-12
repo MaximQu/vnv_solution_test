@@ -98,6 +98,11 @@ body {
 	outline: 1px solid slategrey;
 }
 
+.App {
+	cursor: none;
+    
+}
+
 @layer components {
 	.form-container {
 		clip-path: polygon(

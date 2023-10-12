@@ -8,10 +8,13 @@ import ContactUs from "./components/ContactUs";
 import Faq from "./components/Faq";
 import Popup from "./components/Popup";
 import Breif from "./components/Brief";
+import Cursor from "./components/Cursor";
 
 const App = () => {
+
 	return (
 		<>
+        <Cursor/>
 			<Header />
 			<main className="font-ibmPlexMono">
 				<Hero />
