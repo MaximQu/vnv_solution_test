@@ -28,7 +28,7 @@ const Services = () => {
 							)}
 						>
 							<button
-								className="min-w-[11rem]  px-2 py-4 outline-none focus:bg-white/70"
+								className="min-w-[11rem] px-2 py-4 outline-none focus:bg-white/10"
 								type="button"
 							>
 								{item.tab}
