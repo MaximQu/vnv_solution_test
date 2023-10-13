@@ -15,7 +15,7 @@ const Services = () => {
 				<ul className="mb-6 flex gap-4 overflow-x-scroll pb-2">
 					{servicesData.map((item, index) => (
 						<motion.li
-                        variants={fadeInAnimationVariants}
+							variants={fadeInAnimationVariants}
 							initial="initial"
 							whileInView="animate"
 							viewport={{ once: true }}
@@ -23,11 +23,16 @@ const Services = () => {
 							key={item.id}
 							onClick={() => setActiveTab(item.tab)}
 							className={twMerge(
-								"min-w-[11rem] cursor-pointer whitespace-nowrap bg-white/10 px-2 py-4 text-center text-lg backdrop-blur-md duration-150 hover:bg-white/50",
+								"cursor-pointer whitespace-nowrap bg-white/10 text-center text-lg backdrop-blur-md duration-150 hover:bg-white/50",
 								activeTab === item.tab && "bg-white/50",
 							)}
 						>
-							{item.tab}
+							<button
+								className="min-w-[11rem]  px-2 py-4 outline-none focus:bg-white/70"
+								type="button"
+							>
+								{item.tab}
+							</button>
 						</motion.li>
 					))}
 				</ul>
@@ -36,7 +41,7 @@ const Services = () => {
 						.filter((item) => item.tab === activeTab)
 						.map((item) => (
 							<Fragment key={item.id}>
-								<div className="mb-3 md:mb-5 lg:mb-10 min-h-[15rem] bg-white/10 p-4 backdrop-blur-md md:min-h-min">
+								<div className="mb-3 min-h-[15rem] bg-white/10 p-4 backdrop-blur-md md:mb-5 md:min-h-min lg:mb-10">
 									<h3 className="mb-3 text-xl font-bold">
 										{item.title}
 									</h3>
